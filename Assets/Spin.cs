@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spin : MonoBehaviour
 {
     public float SpinSpeed = 10;
+    public float a = 2;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +15,6 @@ public class Spin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.rotation = Quaternion.Euler(Mathf.Sin(Time.time)* SpinSpeed, Time.time* SpinSpeed, 0);
+        transform.rotation = Quaternion.Euler(Mathf.Sin(Time.time* SpinSpeed)* a, Time.time* SpinSpeed, 0);
     }
 }
