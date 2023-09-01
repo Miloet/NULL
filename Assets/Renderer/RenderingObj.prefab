@@ -143,7 +143,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8699740135162807918, guid: 7f30e254bc5e7324ba9e15f2841035e7, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8376990782799148146}
+      addedObject: {fileID: 1463634854584842315}
   m_SourcePrefab: {fileID: 100100000, guid: 7f30e254bc5e7324ba9e15f2841035e7, type: 3}
 --- !u!20 &4321568045287329829 stripped
 Camera:
@@ -155,7 +155,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8699740135162807918, guid: 7f30e254bc5e7324ba9e15f2841035e7, type: 3}
   m_PrefabInstance: {fileID: 4846687605713003071}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8376990782799148146
+--- !u!114 &1463634854584842315
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,10 +164,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4321568045376562257}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69eed23fc82ba824ca1d8728d68fed37, type: 3}
+  m_Script: {fileID: 11500000, guid: 20eeab5809947154cb248d41caea3e64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpinSpeed: 10
+  rotationSpeed: 0.05
 --- !u!4 &4321568045376562263 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8699740135162807912, guid: 7f30e254bc5e7324ba9e15f2841035e7, type: 3}
