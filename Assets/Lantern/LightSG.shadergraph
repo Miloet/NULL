@@ -501,7 +501,7 @@
         "perlin noise"
     ],
     "m_Precision": 0,
-    "m_PreviewExpanded": false,
+    "m_PreviewExpanded": true,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -762,10 +762,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -462.0,
-            "y": 345.9999694824219,
-            "width": 106.6666259765625,
-            "height": 36.0
+            "x": -515.3333740234375,
+            "y": 214.66664123535157,
+            "width": 106.66668701171875,
+            "height": 36.000030517578128
         }
     },
     "m_Slots": [

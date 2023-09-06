@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-
-    public GameObject cube;
     Rigidbody rb;
     Transform foot;
     bool grounded;
