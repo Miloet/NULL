@@ -18,9 +18,9 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Quaternion target = Quaternion.Euler(-speed.velocity.y, speed.velocity.x, 0);
+        Quaternion target = Quaternion.Euler(5 - speed.velocity.y, speed.velocity.x, 0);
 
         transform.rotation = Quaternion.Lerp(transform.rotation, target, rotationSpeed);
-        transform.position = raccoon.position;
+        transform.position = raccoon.position + new Vector3(0, 1);
     }
 }

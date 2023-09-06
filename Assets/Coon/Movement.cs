@@ -17,6 +17,7 @@ public class Movement : MonoBehaviour
     float speedAtJump;
 
     Buffer leap;
+    public bool leapt;
     float movement;
     public float walkSpeed = 5;
 
@@ -41,6 +42,10 @@ public class Movement : MonoBehaviour
         if (Input.GetAxisRaw("Leap") != 0) leap.Pressed();
         movement = Input.GetAxis("Move");
 
+        //if(leap.Pressed() && !leapt)
+        {
+
+        }
 
         if (jump.GetPress() && grounded)
         { 
@@ -59,7 +64,7 @@ public class Movement : MonoBehaviour
             rb.velocity = new Vector2(movement * walkSpeed, rb.velocity.y);
         else rb.velocity = new Vector2(speedAtJump + (movement * walkSpeed)/4, rb.velocity.y);
 
-        cube.SetActive(grounded);
+        //cube.SetActive(grounded);
     }
 
     public bool checkGround()
