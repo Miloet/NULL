@@ -125,27 +125,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8407844886565391539, guid: 7f30e254bc5e7324ba9e15f2841035e7, type: 3}
       propertyPath: m_ClearFlags
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8407844886565391539, guid: 7f30e254bc5e7324ba9e15f2841035e7, type: 3}
       propertyPath: orthographic
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8407844886565391539, guid: 7f30e254bc5e7324ba9e15f2841035e7, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8407844886565391539, guid: 7f30e254bc5e7324ba9e15f2841035e7, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8407844886565391539, guid: 7f30e254bc5e7324ba9e15f2841035e7, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8699740134772302479, guid: 7f30e254bc5e7324ba9e15f2841035e7, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8699740134772302479, guid: 7f30e254bc5e7324ba9e15f2841035e7, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8699740134772302479, guid: 7f30e254bc5e7324ba9e15f2841035e7, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8699740134830536661, guid: 7f30e254bc5e7324ba9e15f2841035e7, type: 3}
       propertyPath: m_ClearFlags
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8699740134830536661, guid: 7f30e254bc5e7324ba9e15f2841035e7, type: 3}
       propertyPath: m_BackGroundColor.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8699740134830536661, guid: 7f30e254bc5e7324ba9e15f2841035e7, type: 3}
       propertyPath: m_BackGroundColor.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8699740134830536661, guid: 7f30e254bc5e7324ba9e15f2841035e7, type: 3}
       propertyPath: m_BackGroundColor.r
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8699740135115731482, guid: 7f30e254bc5e7324ba9e15f2841035e7, type: 3}
       propertyPath: m_ClearFlags
@@ -459,6 +483,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9114630334724635584}
     m_Modifications:
+    - target: {fileID: 676926892085146527, guid: 38375b9437c084f4baf6ebcc4eaaae46, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 676926892085146527, guid: 38375b9437c084f4baf6ebcc4eaaae46, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789844513465519290, guid: 38375b9437c084f4baf6ebcc4eaaae46, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1789844513465519290, guid: 38375b9437c084f4baf6ebcc4eaaae46, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6921769048116612651, guid: 38375b9437c084f4baf6ebcc4eaaae46, type: 3}
       propertyPath: m_Name
       value: Canvas
