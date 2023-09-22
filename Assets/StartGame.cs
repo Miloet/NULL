@@ -10,26 +10,30 @@ public class StartGame : MonoBehaviour
     public string[] text = { "", "" };
     public TextMeshProUGUI display;
 
+    bool active = false;
+
     public AudioClip[] sound;
 
     private void Start()
     {
-        NextText();
+        StartCoroutine(waitForNext(0));
     }
     public void NextText()
     {
-        
+        if(!active) StartCoroutine(waitForNext(3));
     }
 
-    private IEnumerator waitForNext()
+    private IEnumerator waitForNext(int time)
     {
-        yield return new WaitForSeconds(4);
+        active = true;
+        yield return new WaitForSeconds(time);
         id++;
         if (id >= text.Length)
         {
             Begin();
         }
         else display.text = text[id];
+        active = false;
     }
 
     public void MakeSound()
