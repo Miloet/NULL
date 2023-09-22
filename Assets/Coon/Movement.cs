@@ -56,6 +56,13 @@ public class Movement : MonoBehaviour
         if (Input.GetButtonDown("Leap")) leap.Pressed();
         movement = Input.GetAxis("Move");
 
+        if (Input.GetAxisRaw("Sprint") != 0 && stamina > Time.deltaTime)
+        {
+            walkSpeed = 10;
+            changeStamina(Time.deltaTime/2);
+        }
+        else walkSpeed = 5;
+
         if(leap.GetPress() && !leapt && stamina >= 0.3f)
         {
             rb.velocity = (worldPos - (Vector2)transform.position).normalized * leapSpeed;
@@ -90,6 +97,7 @@ public class Movement : MonoBehaviour
     public void changeStamina(float c)
     {
         stamina -= c;
+        stamina = Mathf.Clamp(stamina, 0, 1);
         change = 5;
     }
 
