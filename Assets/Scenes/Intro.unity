@@ -797,16 +797,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text:
-  - Hey <wave>Coon<wave>...
-  - <color=#fffad9>Yo.</color>
-  - Corporate needs you to check out this facility that was abandoned after the <color=red>war</color>.
-  - <color=#fffad9>Another one? I almost got killed last time you know...</color>
+  - '{offset}<color=#919191>[Incoming Transmission]</color>'
+  - Hey <wave>Coon...</wave>
+  - <color=#fcba03>Yo <wave>boss.</wave></color>
+  - Corporate needs you to check out this facility that was abandoned after the <color=red><dangle>war</dangle></color>.
+  - <color=#fcba03>Another one? I almost got killed last time you know...</color>
   - Yeah, I know, I know. It's dangerous work but it has to be done. The <color=red><wave>NULL</wave></color>
-    fields in the area are out of whack.
-  - '<color=red><wave>NULL</wave></color>? Again? '
-  - Get in, find the <color=red><wave>ANOMALY</wave></color> and <color=red><wave>DISPOSE</wave></color>
-    of it
+    fields in the area are all out of whack.
+  - <color=#fcba03><color=red><wave>NULL</wave></color>? Again? </color>
+  - 'Yeah... I think some <color=#48647a>Old World Materials</color> are starting
+    to reach <color=green><dangle>half life</dangle></color>. But you''re the guy
+    for the job.  '
+  - So; get in, find the <color=red><wave>ANOMALY</wave></color> and <color=red><wave>DISPOSE</wave></color>
+    of it.
+  - <color=#fcba03>You always it sound so simple.</color>
+  - 'Cuz i got faith in you opperative. '
+  - <color=#fcba03>Youre gonna owe me a drink after this one.</color>
+  - "Haha, Roger that. Good luck out there...\r"
+  - '{offset}<color=#919191>[Connection Terminated]</color>'
   display: {fileID: 1915901233}
+  animator: {fileID: 1915901235}
   sound: []
 --- !u!4 &1542655661
 Transform:
@@ -983,7 +993,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1542655660}
         m_TargetAssemblyTypeName: StartGame, Assembly-CSharp
-        m_MethodName: NextText
+        m_MethodName: TextFinished
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

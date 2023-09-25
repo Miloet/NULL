@@ -56,7 +56,7 @@ public class Movement : MonoBehaviour
         if (Input.GetButtonDown("Leap")) leap.Pressed();
         movement = Input.GetAxis("Move");
 
-        if (Input.GetAxisRaw("Sprint") != 0 && stamina > Time.deltaTime)
+        if (Input.GetAxisRaw("Sprint") != 0 && stamina != 0)
         {
             walkSpeed = 10;
             changeStamina(Time.deltaTime/2);

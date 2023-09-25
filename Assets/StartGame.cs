@@ -3,37 +3,66 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using Febucci.UI;
 
 public class StartGame : MonoBehaviour
 {
     int id = -1;
+    [TextArea(10, 10)]
     public string[] text = { "", "" };
     public TextMeshProUGUI display;
+    public TextAnimatorPlayer animator;
 
-    bool active = false;
+    bool finished = false;
 
     public AudioClip[] sound;
+    float speed;
 
     private void Start()
     {
-        StartCoroutine(waitForNext(0));
-    }
-    public void NextText()
-    {
-        if(!active) StartCoroutine(waitForNext(3));
+        waitForNext();
     }
 
-    private IEnumerator waitForNext(int time)
+    private void Update()
     {
-        active = true;
-        yield return new WaitForSeconds(time);
+        if (Input.anyKeyDown)
+        {
+            if (speed == 2) animator.SkipTypewriter();
+            changeSpeed(2);
+            if(finished == true)
+            {
+                NextText();
+            }
+
+        }
+    }
+
+    public void NextText()
+    {
+        waitForNext();
+    }
+
+    public void TextFinished()
+    {
+        finished = true;
+    }
+
+    private void waitForNext()
+    {
+        finished = false;
+        changeSpeed(1);
         id++;
         if (id >= text.Length)
         {
             Begin();
         }
         else display.text = text[id];
-        active = false;
+    }
+
+    private void changeSpeed(float newSpeed)
+    {
+        animator.SetTypewriterSpeed(newSpeed);
+        speed = newSpeed;
     }
 
     public void MakeSound()
