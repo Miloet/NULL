@@ -98,7 +98,8 @@ public class Movement : MonoBehaviour
     {
         stamina -= c;
         stamina = Mathf.Clamp(stamina, 0, 1);
-        change = 5;
+        change = 1;
+        if (stamina == 0) change = 3;
     }
 
     public bool checkGround()
