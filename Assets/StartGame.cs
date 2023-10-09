@@ -10,16 +10,30 @@ public class StartGame : MonoBehaviour
     int id = -1;
     [TextArea(10, 10)]
     public string[] text = { "", "" };
+
+    public Speech[] voice;
     public TextMeshProUGUI display;
     public TextAnimatorPlayer animator;
 
     bool finished = false;
 
-    public AudioClip[] sound;
+    AudioClip s_raccoon;
+    AudioClip s_boss;
+    AudioClip s_system;
     float speed;
+
+    public enum Speech
+    {
+        Raccoon,
+        Boss,
+        System
+    }
 
     private void Start()
     {
+        s_raccoon = Resources.Load<AudioClip>("Sounds/RaccoonSpeech");
+        s_boss = Resources.Load<AudioClip>("Sounds/BossSpeech");
+        s_system = Resources.Load<AudioClip>("Sounds/SystemSpeech");
         waitForNext();
     }
 
@@ -67,11 +81,25 @@ public class StartGame : MonoBehaviour
 
     public void MakeSound()
     {
-        if (sound.Length > 0)
+        
+        AudioClip c;
+        switch (voice[id])
         {
-            AudioClip c = sound[Random.Range(0, sound.Length - 1)];
-            SoundManager.play(c, gameObject, 1, 0);
+            default:
+            case Speech.Raccoon:
+                c = s_raccoon;
+                break;
+
+            case Speech.Boss:
+                c = s_boss;
+                break;
+            case Speech.System:
+                c = s_system;
+                break;
         }
+
+        SoundManager.play(c, gameObject, 1, 0);
+       
     }
 
     public static void Begin()

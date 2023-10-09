@@ -7,6 +7,9 @@ public class Cutscene : MonoBehaviour
     public CameraMovement cm;
     public Movement pm;
 
+    Material m1;
+    Material m2;
+
     float time = 5;
 
     Vector3 originalPos;
@@ -16,6 +19,13 @@ public class Cutscene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject g = transform.Find("Plane").gameObject;
+        g.SetActive(true);
+        m1 = g.GetComponent<Renderer>().material;
+        g = transform.Find("Plane2").gameObject;
+        g.SetActive(true);
+        m2 = transform.Find("Plane2").GetComponent<Renderer>().material;
+
         changeEnabled(false);
         originalPos = cm.transform.position;
     }
@@ -39,11 +49,13 @@ public class Cutscene : MonoBehaviour
     {
         if (time > 0)
         {
+            m1.color = new Color(0,0,0,EaseInOut(time / 5));
+            m2.color = new Color(0, 0, 0, EaseInOut(time / 5));
             lastPosition = cm.transform.position;
             cm.transform.position = Vector3.Lerp(pm.transform.position + new Vector3(0,1), originalPos, time/5 * EaseInOut(time/5));
 
-            Vector3 speed = cm.transform.position - lastPosition;
-            Quaternion target = Quaternion.Euler(5 - speed.y * 2, speed.x * 2, 0);
+            Vector3 speed = lastPosition - cm.transform.position;
+            Quaternion target = Quaternion.Euler(10 - speed.y * 2, speed.x * 2, 0);
 
             transform.rotation = Quaternion.Lerp(transform.rotation, target, .05f);
         }
@@ -54,6 +66,6 @@ public class Cutscene : MonoBehaviour
         }
 
 
-        time -= Time.deltaTime;
+        time -= Time.deltaTime/2f;
     }
 }
