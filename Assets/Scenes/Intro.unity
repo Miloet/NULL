@@ -686,16 +686,16 @@ MonoBehaviour:
   - <color=#fcba03>Another one? I almost got killed last time you know...</color>
   - Yeah, I know, I know. It's dangerous work but it has to be done. The <color=red><wave>NULL</wave></color>
     fields in the area are all out of whack.
-  - <color=#fcba03><color=red><wave>NULL</wave></color>? Again? </color>
-  - 'Yeah... I think some <color=#48647a>Old World Materials</color> are starting
-    to reach <color=green><dangle>half life</dangle></color>. But you''re the guy
-    for the job.  '
-  - So; get in, find the <color=red><wave>ANOMALY</wave></color> and <color=red><wave>DISPOSE</wave></color>
-    of it.
-  - <color=#fcba03>You always it sound so simple.</color>
-  - 'Cuz i got faith in you opperative. '
-  - <color=#fcba03>Youre gonna owe me a drink after this one.</color>
-  - "Haha, Roger that. Good luck out there...\r"
+  - <color=#fcba03><color=red><wave>NULL</wave></color>? Again?</color>
+  - Yeah... I think some <color=#48647a>Old World Materials</color> are starting
+    to reach <color=green><dangle>half life</dangle></color> and thats what causing
+    it.
+  - In any case you're the guy for the job. So; get in, find the <color=red><wave>ANOMALY</wave></color>
+    and <color=red><wave>DISPOSE</wave></color> of it.
+  - <color=#fcba03>You always make it sound so simple.</color>
+  - 'Its because I got faith in you opperative. '
+  - <color=#fcba03>You're gonna owe me a or two drink after this one.</color>
+  - "Haha, Roger that. Good luck out there.\r"
   - '{offset}<color=#919191>[Connection Terminated]</color>'
   voice: 0200000001000000000000000100000000000000010000000000000001000000010000000000000001000000000000000100000002000000
   display: {fileID: 1915901233}

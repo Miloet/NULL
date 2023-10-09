@@ -49,15 +49,15 @@ public class Cutscene : MonoBehaviour
     {
         if (time > 0)
         {
-            m1.color = new Color(0,0,0,EaseInOut(time / 5));
+            m1.color = new Color(0, 0, 0, EaseInOut(time / 5));
             m2.color = new Color(0, 0, 0, EaseInOut(time / 5));
             lastPosition = cm.transform.position;
             cm.transform.position = Vector3.Lerp(pm.transform.position + new Vector3(0,1), originalPos, time/5 * EaseInOut(time/5));
 
-            Vector3 speed = lastPosition - cm.transform.position;
-            Quaternion target = Quaternion.Euler(10 - speed.y * 2, speed.x * 2, 0);
-
-            transform.rotation = Quaternion.Lerp(transform.rotation, target, .05f);
+            
+            
+            
+            cm.gameObject.transform.rotation = Quaternion.Euler(5, 0, 0);
         }
         else
         {

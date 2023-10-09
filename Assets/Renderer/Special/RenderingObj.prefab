@@ -91,9 +91,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9114630334724635584}
     m_Modifications:
+    - target: {fileID: 8699740134772302479, guid: 7f30e254bc5e7324ba9e15f2841035e7, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 407
+      objectReference: {fileID: 0}
+    - target: {fileID: 8699740134830536661, guid: 7f30e254bc5e7324ba9e15f2841035e7, type: 3}
+      propertyPath: orthographic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8699740134830536661, guid: 7f30e254bc5e7324ba9e15f2841035e7, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 320
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 8699740135115731482, guid: 7f30e254bc5e7324ba9e15f2841035e7, type: 3}
       propertyPath: m_BackGroundColor.a
@@ -113,11 +121,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8699740135162807912, guid: 7f30e254bc5e7324ba9e15f2841035e7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.42
+      value: -25
       objectReference: {fileID: 0}
     - target: {fileID: 8699740135162807912, guid: 7f30e254bc5e7324ba9e15f2841035e7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.47
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 8699740135162807912, guid: 7f30e254bc5e7324ba9e15f2841035e7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -314,12 +322,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7646105604872408291, guid: 38375b9437c084f4baf6ebcc4eaaae46, type: 3}
+      propertyPath: m_Name
+      value: Background
+      objectReference: {fileID: 0}
     - target: {fileID: 8260751410021222368, guid: 38375b9437c084f4baf6ebcc4eaaae46, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8514959955905535891, guid: 38375b9437c084f4baf6ebcc4eaaae46, type: 3}
+      propertyPath: m_Name
+      value: 'Main '
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6921769048233174284, guid: 38375b9437c084f4baf6ebcc4eaaae46, type: 3}
+    - {fileID: 6921769048430314302, guid: 38375b9437c084f4baf6ebcc4eaaae46, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38375b9437c084f4baf6ebcc4eaaae46, type: 3}
