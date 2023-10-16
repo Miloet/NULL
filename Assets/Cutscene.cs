@@ -54,9 +54,6 @@ public class Cutscene : MonoBehaviour
             lastPosition = cm.transform.position;
             cm.transform.position = Vector3.Lerp(pm.transform.position + new Vector3(0,1), originalPos, time/5 * EaseInOut(time/5));
 
-            
-            
-            
             cm.gameObject.transform.rotation = Quaternion.Euler(5, 0, 0);
         }
         else
