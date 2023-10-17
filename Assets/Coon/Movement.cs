@@ -23,6 +23,7 @@ public class Movement : MonoBehaviour
     float movement;
     public float walkSpeed = 5;
 
+    public Animator an;
     Camera cam;
 
     // Start is called before the first frame update
@@ -35,6 +36,7 @@ public class Movement : MonoBehaviour
 
         rb = GetComponent<Rigidbody>();
 
+
         stamina = 1;
 
         cam = Camera.main;
@@ -43,6 +45,9 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        an.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        an.speed = Mathf.Abs(rb.velocity.x / 2.5f);
+
         grounded = checkGround();
 
         if(grounded) leapt = false;
