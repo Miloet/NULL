@@ -46,7 +46,12 @@ public class Movement : MonoBehaviour
     void Update()
     {
         an.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
-        an.speed = Mathf.Abs(rb.velocity.x / 2.5f);
+
+        var spd = Mathf.Abs(rb.velocity.x / 2.5f);
+        if (spd < 0.1f) spd = 1; 
+        an.speed = Mathf.Abs(spd);
+
+        if(rb.velocity.x != 0) transform.rotation = Quaternion.Euler(0, 90 + Mathf.Sign(rb.velocity.x) * 90, 0);
 
         grounded = checkGround();
 
