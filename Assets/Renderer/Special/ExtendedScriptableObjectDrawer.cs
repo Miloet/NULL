@@ -2,6 +2,8 @@
 // Released under the MIT Licence as held at https://opensource.org/licenses/MIT
 
 // Must be placed within a folder named "Editor"
+
+/*
 using System;
 using System.Reflection;
 using System.Collections;
@@ -335,3 +337,4 @@ public class ExtendedScriptableObjectDrawer : PropertyDrawer
 		return false;
 	}
 }
+*/

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    public static Transform self;
+
     public float stamina;
 
     Rigidbody rb;
@@ -26,9 +28,16 @@ public class Movement : MonoBehaviour
     public Animator an;
     Camera cam;
 
+    public static Buffer Interact;
+
+    
+
+
     // Start is called before the first frame update
     void Start()
     {
+        self = transform;
+
         jump = Buffer.SetBuffer(gameObject,0.2f,false);
         leap = Buffer.SetBuffer(gameObject,0.1f,true);
 
@@ -51,7 +60,7 @@ public class Movement : MonoBehaviour
         if (spd < 0.1f) spd = 1; 
         an.speed = Mathf.Abs(spd);
 
-        if(rb.velocity.x != 0) transform.rotation = Quaternion.Euler(0, 90 + Mathf.Sign(rb.velocity.x) * 90, 0);
+        if(Mathf.Abs(rb.velocity.x) > 0.1f) transform.rotation = Quaternion.Euler(0, 90 + Mathf.Sign(rb.velocity.x) * 90, 0);
 
         grounded = checkGround();
 

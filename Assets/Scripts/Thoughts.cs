@@ -17,7 +17,9 @@ public class Thoughts : MonoBehaviour
     {
         display = GetComponent<TextMeshProUGUI>();
         s_raccoon = Resources.Load<AudioClip>("Sounds/RaccoonSpeech");
-
+        gameObject.AddComponent<AudioSource>();
+        gameObject.AddComponent<AudioSource>();
+        gameObject.AddComponent<AudioSource>();
         display.text = "";
     }
 
@@ -46,6 +48,6 @@ public class Thoughts : MonoBehaviour
 
     public void MakeSound()
     {
-        SoundManager.play(s_raccoon, gameObject, 1, 0);
+        SoundManager.play(s_raccoon, gameObject, 1, 1);
     }
 }

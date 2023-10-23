@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Warehouse.unity
     guid: 839b3b2c3ed69ae45b108d33df35d690
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: ad845119bb6979249b5ca81ff9d3ee53
   m_configObjects: {}
