@@ -124,7 +124,7 @@ public class Movement : MonoBehaviour
     public bool checkGround()
     {
         LayerMask layer = LayerMask.GetMask("Ground", "Background");
-        return Physics.Raycast(foot.position, Vector3.down, 0.1f, layer, QueryTriggerInteraction.Ignore);
+        return Physics.Raycast(foot.position, Vector3.down, 0.35f, layer, QueryTriggerInteraction.Ignore);
     }
 
     public void resetJumping()

@@ -18,7 +18,6 @@ public class Finish : MonoBehaviour
         if(finish)
         {   
             haveThoughts.text = "All finished at last.";
-            haveThoughts.repeating = false;
         }
     }
     private void OnTriggerEnter(Collider other)

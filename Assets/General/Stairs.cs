@@ -40,7 +40,7 @@ public class Stairs : MonoBehaviour
     {
         if(entered && Input.GetKeyDown(KeyCode.E))
         {
-            Movement.self.position = new Vector3(teleport.transform.position.x, teleport.transform.position.y, Movement.self.position.z);
+            Movement.self.position = new Vector3(teleport.transform.position.x, teleport.transform.position.y + 0.25f, Movement.self.position.z);
         }
     }
 }
